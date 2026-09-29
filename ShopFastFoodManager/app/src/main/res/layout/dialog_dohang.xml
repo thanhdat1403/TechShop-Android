@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/splash_gradient">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Tình trạng đơn hàng"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#D0F45B1E"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Spinner -->
+    <Spinner
+        android:id="@+id/spinner_dialog"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:padding="8dp"
+        android:background="#0DD8F1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Nút Đồng ý -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dongy_dialog"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FF6F61"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:text="Đồng ý"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="16dp"
+        android:elevation="4dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>

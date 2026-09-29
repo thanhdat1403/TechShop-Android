@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bóng đổ sáng -->
+    <item >
+        <shape>
+            <solid android:color="#D9D9D9"/>
+            <corners android:radius="20dp"/>
+            <padding android:left="5dp" android:top="5dp" android:right="5dp" android:bottom="5dp"/>
+        </shape>
+    </item>
+    <!-- Bóng đổ tối -->
+    <item android:right="2dp" android:left="2dp" android:top="2dp" android:bottom="2dp">
+        <shape>
+            <solid android:color="#B0B0B0"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+    <!-- Nền của nút -->
+    <item >
+        <shape>
+            <solid android:color="#FFFFFF"/> <!-- Nền trắng cho nút -->
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+</layer-list>

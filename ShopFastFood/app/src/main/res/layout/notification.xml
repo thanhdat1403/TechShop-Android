@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:elevation="4dp"
+    android:layout_margin="8dp"
+    android:clipToPadding="false"
+    android:gravity="center_vertical">
+
+    <!-- Icon Thông báo -->
+    <ImageView
+        android:id="@+id/imgnoti"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_phone_24"
+        android:scaleType="centerCrop"/>
+
+    <!-- Nội dung thông báo -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:id="@+id/title_noti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông báo"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#4C4848"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Nội dung -->
+        <TextView
+            android:id="@+id/body_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nội dung thông báo sẽ hiển thị ở đây."
+            android:textColor="#4C4848"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+</LinearLayout>

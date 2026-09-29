@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Thuộc tính cho CustomChipStyle -->
+    <declare-styleable name="CustomChipStyle">
+        <attr name="shapeAppearanceCornerSmall" format="dimension"/>
+    </declare-styleable>
+
+    <!-- Thuộc tính cho NeumorphButton -->
+    <declare-styleable name="NeumorphButton">
+        <attr name="colorShadowDark" format="color"/>
+    </declare-styleable>
+
+    <!-- Thuộc tính chung cho Neumorphic Views -->
+    <declare-styleable name="NeumorphView">
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="elevation" format="dimension"/>
+    </declare-styleable>
+
+    <!-- Thuộc tính cho NeumorphImageView -->
+    <declare-styleable name="NeumorphImageView">
+        <attr name="colorShadowLight" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+    </declare-styleable>
+</resources>

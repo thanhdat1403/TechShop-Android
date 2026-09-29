@@ -1,0 +1,11 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url "https://jitpack.io" } //đường dẫn thư viện giúp thêm hiệu ứng cho nút sửa xóa trong phần admin
+    }
+}
+rootProject.name = "ShopFastFood"
+include ':app'

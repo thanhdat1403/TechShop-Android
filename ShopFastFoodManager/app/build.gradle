@@ -1,0 +1,84 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services' // Firebase plugin
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.manager.shopfastfood"
+        //minSdk 22
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures{
+        viewBinding true
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'  // Phiên bản ổn định
+    implementation 'com.google.android.material:material:1.6.0'  // Phiên bản ổn định
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-auth:22.1.0'// Phiên bản ổn định
+    testImplementation 'junit:junit:4.+'  // Phiên bản ổn định
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'  // Phiên bản ổn định
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'  // Phiên bản ổn định
+    //CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+    //RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    //glider
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    //RxJava
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0"
+    //Badge
+    implementation 'com.nex3z:notification-badge:1.0.4'
+    //even bus
+    implementation("org.greenrobot:eventbus:3.3.1")
+    //paper (hiểu lôm la là tv hỗ trợ khi thoát app ra quay lại thì email ,pass tự động lưu và tự động điền
+    implementation 'io.github.pilgr:paperdb:2.7.2'
+    //Gson
+    //implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    //Lottie (Giúp hỗ trợ cho hiển thị Loading, của đuôi .json)
+    implementation 'com.airbnb.android:lottie:5.2.0'
+    //neumorphirm (Giúp tăng hiệu ứng sắc nét cho nút sửa ,xóa trong phần admin)
+    implementation 'com.github.fornewid:neumorphism:0.3.0'
+    //image pick
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+    // OkHttp Core
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    // OkHttp Logging Interceptor (hữu ích để debug API)
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+    //Firebase (hỗ trợ tích hợp google gửi token hay là thông báo về thiết bị)
+    implementation platform('com.google.firebase:firebase-bom:32.2.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    //Firebase messager
+    implementation 'com.google.firebase:firebase-messaging:24.1.0'
+}
+apply plugin: 'com.google.gms.google-services'

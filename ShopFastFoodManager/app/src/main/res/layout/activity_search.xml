@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".activity.SearchActivity">
+
+    <!-- Toolbar tối giản -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FF6F61"
+        app:title="Tìm kiếm"
+        app:titleTextColor="@android:color/white"/>
+
+    <!-- Ô nhập tìm kiếm -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <!-- Icon tìm kiếm -->
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+            <!-- Ô nhập tìm kiếm -->
+            <EditText
+                android:id="@+id/edtsearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Tìm sản phẩm..."
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="10dp"
+                android:inputType="text"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Danh sách kết quả -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/splash_gradient"/>
+</LinearLayout>

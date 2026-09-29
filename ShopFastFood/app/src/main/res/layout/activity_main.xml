@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Nội dung chính của ứng dụng -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toobarmanhinhchinh"
+                app:title=""
+                android:background="#FF6F61"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:elevation="4dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="0dp">
+
+                <!-- LinearLayout để chứa TextView và giỏ hàng -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Tiêu đề TRANG CHỦ -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trang chủ"
+                        android:textSize="20sp"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+                        android:paddingTop="12dp" /> <!-- Sử dụng padding để dịch tiêu đề xuống -->
+
+                    <!-- Icon tìm kiếm (Moved to the left of the cart) -->
+                    <ImageView
+                        android:id="@+id/imgsearch"
+                        android:src="@drawable/ic_search_24"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:paddingEnd="14dp"
+                        android:layout_marginRight="5dp"/>
+
+                    <!-- Giỏ hàng -->
+                    <FrameLayout
+                        android:id="@+id/framegiohang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:paddingEnd="16dp">
+
+                        <!-- Badge hiển thị số lượng -->
+                        <com.nex3z.notificationbadge.NotificationBadge
+                            android:id="@+id/menu_sl"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="top|end"
+                            android:layout_marginEnd="-2dp"
+                            android:layout_marginTop="-3dp"
+                            android:gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="10sp"
+                            android:elevation="4dp"/> <!-- Thêm độ nổi để tạo chiều sâu -->
+
+                        <!-- Icon giỏ hàng -->
+                        <ImageView
+                            android:id="@+id/img_cart"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_cart_24"
+                            android:contentDescription="Giỏ hàng"
+                            app:tint="@android:color/white" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <!-- ViewFlipper -->
+            <ViewFlipper
+                android:id="@+id/viewlipper"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="0dp">
+                <!-- Thêm ít nhất một View bên trong ViewFlipper -->
+            </ViewFlipper>
+
+            <!-- LinearLayout chứa TextView và RecyclerView -->
+            <LinearLayout
+                android:background="#2A682D"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <!-- TextView -->
+                <TextView
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#FDD835"
+                    android:textStyle="bold"
+                    android:text="SẢN PHẨM MỚI NHẤT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleview"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#B10811"
+                    android:padding="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- NavigationView -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationview"
+            android:layout_gravity="start"
+            android:layout_width="250dp"
+            android:layout_height="match_parent">
+
+            <!-- ListView trong NavigationView -->
+            <ListView
+                android:id="@+id/listviewmanhinhchinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

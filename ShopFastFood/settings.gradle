@@ -1,0 +1,12 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // ⚠️ JCenter đã bị ngừng hỗ trợ, nên chỉ dùng nếu cần thiết
+        maven { url 'https://jitpack.io' }
+        flatDir { dirs 'app/libs' } // Chỉ định thư mục chứa file .aar
+    }
+}
+rootProject.name = "ShopFastFood"
+include ':app'

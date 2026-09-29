@@ -1,0 +1,90 @@
+# =========================================================
+# Android / Gradle
+# =========================================================
+
+.gradle/
+**/.gradle/
+build/
+**/build/
+
+# Android Studio / IntelliJ
+.idea/
+**/.idea/
+*.iml
+
+# Local Android configuration
+local.properties
+**/local.properties
+
+# Android generated / native build
+.externalNativeBuild/
+**/.externalNativeBuild/
+.cxx/
+**/.cxx/
+
+# Temporary / cache files
+.tmp/
+**/.tmp/
+caches/
+**/caches/
+daemon/
+**/daemon/
+jdks/
+**/jdks/
+
+# Gradle downloaded distributions
+**/wrapper/dists/
+
+# Gradle native/cache files
+**/native/
+
+# Firebase configuration
+# Contains project-specific Firebase configuration
+google-services.json
+**/google-services.json
+
+# Signing keys
+*.jks
+*.keystore
+*.p12
+
+# =========================================================
+# PHP / XAMPP
+# =========================================================
+
+# Debug / log files
+*.log
+debug.log
+
+# Local configuration
+config.local.php
+.env
+.env.*
+
+# =========================================================
+# Sensitive database dumps
+# =========================================================
+
+# The SQL file currently contains user/account/token data.
+shopfastfood.sql
+
+# =========================================================
+# Archives / temporary project backups
+# =========================================================
+
+*.rar
+*.zip
+
+# =========================================================
+# OS files
+# =========================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================================================
+# Project-specific temporary files
+# =========================================================
+
+local_history.patch
